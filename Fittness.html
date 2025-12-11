@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mein Blog</title>
+  <!-- Bootstrap einbinden (CDN) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-success text-white text-center py-5">
+  <h1>Arsenijs Blog</h1>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Home</a>
+  <a class="navbar-brand" href="essen.html">Essensgewohnheiten</a>
+  <a class="navbar-brand" href="Fittness.html">Fitness  programm</a>
+  <a class="navbar-brand" href="Bilderkarussel.html">bilderKarussell</a>
+  <!-- Navigationselemente hier ergänzen -->
+</nav>
+<!-- 🎵 Musiksteuerung -->
+<audio id="bg-music" loop>
+  <source src="1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="text-center my-4">
+  <button id="music-btn" class="btn btn-outline-primary">🎵 Musik starten</button>
+</div>
+
+<script>
+const music = document.getElementById('bg-music');
+const btn = document.getElementById('music-btn');
+let playing = false;
+
+btn.addEventListener('click', () => {
+  if (!playing) {
+    music.play();
+    btn.textContent = "⏸️ Musik pausieren";
+    playing = true;
+  } else {
+    music.pause();
+    btn.textContent = "🎵 Musik starten";
+    playing = false;
+  }
+});
+</script>
+<!-- Bewertung -->
+<div class="mt-3">
+  <div class="stars" data-id="1">
+    ★ ★ ★ ★ ★
+  </div>
+  <div class="rating-count" id="rating-count-1">Bewertung: 0 Sterne</div>
+</div>
+</div>
+</div>
+
+<!-- Hauptinhalt -->
+<div class="container mt-4">
+  <h2>Hier kommt mein Sportprogramm.</h2>
+  <p>
+    <!-- Kurze Begrüßung oder Einleitungstext einfügen -->
+  </p>
+</div>
+
+<!-- Bildergalerie -->
+<div class="container mt-4">
+  <h3>Bildergalerie</h3>
+  <div class="row">
+    <!-- Bilder in Spalten einfügen -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">Fußball</h4>
+        <p><strong>Uhrzeit:</strong> 18 Uhr beginnt bei mir Fußballtraining mit meiner Manschaft</p>
+        <img src="Bilder/Vereinsfoto.jpg" alt="Frühstück Bild" class="img-fluid"width="700px" height="250px">
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">Badminton</h4>
+        <p><strong>Uhrzeit:</strong> In meiner Freizeit spiele ich gerne Badminton</p>
+        <img src="Bilder/Badminton.jpg" alt="Frühstück Bild" class="img-fluid"width="700px" height="250px">
+      </div>
+    </div>
+
+    
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">Fahrrad</h4>
+        <p><strong></strong> Fahrrad fahren</p>>
+        <img src="Bilder/Fitx.jpg" alt="" class="img-fluid" width="700px" height="250px">
+      </div>
+    </div>
+    
+
+    </div>
+    <!-- Weitere Bilder ergänzen -->
+  </div>
+</div>
+
+<!-- Fußzeile -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Mein Blog</p>
+</footer>
+
+<!-- JavaScript für Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Kommentare -->
+<div class="comment-section" data-id="1">
+  <h5>Kommentare</h5>
+  <div class="comments-list" id="comments-1"></div>
+  <div class="form-group mt-2">
+    <textarea class="form-control" rows="2" placeholder="Kommentar schreiben..."></textarea>
+    <button class="btn btn-primary btn-sm mt-2 submit-comment">Absenden</button>
+  </div>
+</div>
+
+</body>
+</html>
